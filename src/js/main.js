@@ -2,6 +2,8 @@ import modals from './modules/modals';
 import sliders from './modules/sliders';
 import forms from './modules/forms';
 import mask from './modules/mask';
+import languageCheck from './modules/language_check';
+import download from './modules/download';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -11,6 +13,8 @@ window.addEventListener('DOMContentLoaded', () => {
     sliders('.main-slider-item', 'vertical');
     forms();
     mask('[name="phone"]');
+    languageCheck('[name="message"]');
+    download('.button-transparent', '#styles .row');
 
 
 

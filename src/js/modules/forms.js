@@ -1,15 +1,16 @@
-// import checkNumInputs from './checkNumInputs';
+import {postData} from '../../assets/services/requests';
 
-const forms = (state) => {
+
+const forms = () => {
     const form = document.querySelectorAll('form'),
           inputs = document.querySelectorAll('input');
 
     const uploads = document.querySelectorAll('[name="upload"]');
-    console.log(uploads);
 
     uploads.forEach(upload => {
         upload.addEventListener('input', () => {
             const fileName = upload.files[0].name;
+            console.log(upload.files)
             let fixedName;
             fileName.length > 12 ? 
                 fixedName = '...' :
@@ -17,8 +18,6 @@ const forms = (state) => {
             upload.previousElementSibling.textContent = fileName.split('.')[0].slice(0,7) + fixedName + fileName.split('.')[1];
         })
     })
-
-    // checkNumInputs('input[name="user_phone"]');
     
     const message = {
         loading: 'Загрузка...',
@@ -29,14 +28,14 @@ const forms = (state) => {
         fail: 'assets/img/fail.png',
     };
 
-    const postData = async (url, data) => {
-        let res = await fetch(url, {
-            method: "POST",
-            body: data
-        });
+    // const postData = async (url, data) => {
+    //     let res = await fetch(url, {
+    //         method: "POST",
+    //         body: data
+    //     });
 
-        return await res.text();
-    };
+    //     return await res.text();
+    // };
 
     const clearInputs = () => {
         inputs.forEach(item => {
