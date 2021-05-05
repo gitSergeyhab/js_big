@@ -4,7 +4,8 @@ import forms from './modules/forms';
 import mask from './modules/mask';
 import languageCheck from './modules/language_check';
 import download from './modules/download';
-import calculator from './modules/calculator'
+import calculator from './modules/calculator';
+import calcDb from './modules/calc-db';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -16,7 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
     mask('[name="phone"]');
     languageCheck('[name="message"]');
     download('.button-transparent', '#styles .row');
-    calculator('XXX');
+    // calculator('XXX');
+    calcDb();
 
 
 

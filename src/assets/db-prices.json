@@ -1,0 +1,29 @@
+// not used
+
+{
+    "prices": {
+
+        "sizes": {
+            "40x50": 2000,
+            "50x70": 4000,
+            "70x70": 6000,
+            "70x100": 7500
+        },
+
+        "materials": {
+            "fiber": 1,
+            "linen": 1.4,
+            "cotton": 1.8
+        },
+
+        "options": {
+            "gel": 1500,
+            "express": 2500,
+            "delivery": 1000
+        },
+
+        "promocode": {
+            "XXX": 0.7
+        }
+    }
+}
