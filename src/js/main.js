@@ -11,6 +11,7 @@ import filter1 from './modules/filter1';
 import wallPictures from './modules/wall-pictures';
 import accordion from './modules/accordion';
 import burgerMenu from './modules/burger-menu';
+import scrolling from './modules/scrolling';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -29,6 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     wallPictures('.sizes-block');
     accordion('#accordion', '.accordion-heading', '.accordion-block');
     burgerMenu('.burger', '.burger-menu');
+    scrolling('.pageup');
 
 
 

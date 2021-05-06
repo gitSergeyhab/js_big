@@ -10,7 +10,7 @@ const forms = () => {
     uploads.forEach(upload => {
         upload.addEventListener('input', () => {
             const fileName = upload.files[0].name;
-            console.log(upload.files)
+            // console.log(upload.files)
             let fixedName;
             fileName.length > 12 ? 
                 fixedName = '...' :
