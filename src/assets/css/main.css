@@ -119,6 +119,12 @@ h4 {
   font-family: 'Circe Bold', sans-serif;
   font-size: 1.5rem;
 }
+
+/* @media (min-width: 992px) {
+  .header .burger {
+    pointer-events: none;
+  }
+} */
 .header .burger img {
   width: 2rem;
   height: 2rem;
@@ -1724,4 +1730,13 @@ h4 {
     padding: 3rem 3rem;
     width: 25rem;
   }
+}
+
+.js-red-text {
+	color: rgb(88, 14, 14) !important;
+	font-weight: 800 !important;
+}
+
+.js-display-block {
+  display: block;
 }

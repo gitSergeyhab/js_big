@@ -6,6 +6,11 @@ import languageCheck from './modules/language_check';
 import download from './modules/download';
 import calculator from './modules/calculator';
 import calcDb from './modules/calc-db';
+import filter from './modules/filter';
+import filter1 from './modules/filter1';
+import wallPictures from './modules/wall-pictures';
+import accordion from './modules/accordion';
+import burgerMenu from './modules/burger-menu';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -19,6 +24,11 @@ window.addEventListener('DOMContentLoaded', () => {
     download('.button-transparent', '#styles .row');
     // calculator('XXX');
     calcDb();
+    // filter('.portfolio-menu li', '.portfolio-block');
+    filter1('.portfolio-menu', '.portfolio-block', 'active');
+    wallPictures('.sizes-block');
+    accordion('#accordion', '.accordion-heading', '.accordion-block');
+    burgerMenu('.burger', '.burger-menu');
 
 
 
