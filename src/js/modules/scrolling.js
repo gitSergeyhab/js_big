@@ -63,8 +63,9 @@ const scrolling = (upSelector) => {
         link.addEventListener('click', function(evt) {
             evt.preventDefault();
 
-            let widhTop = document.documentElement.scrollTop;
-            let hash = this.hash;
+            let widhTop = document.documentElement.scrollTop; // прокрученная часть сайта
+            let hash = this.hash; // то что в хрефе после #
+            //.getBoundingClientRect() возвращает размер элемента и его позицию относительно viewport (часть страницы, показанная на экране, и которую мы видим)
             let toBlock = document.querySelector(hash).getBoundingClientRect().top;
             let start = null;
 
@@ -72,12 +73,12 @@ const scrolling = (upSelector) => {
 
             function step(time) {
                 if (start === null) {
-                    start = time
+                    start = time // выполнит один (первый раз)
                 }
 
                 let progress = time - start;
                 let y = (
-                    toBlock < 0 ?
+                    toBlock < 0 ? // если элемент "внизу"
                     Math.max(widhTop - progress / speed, widhTop + toBlock) :
                     Math.min(widhTop + progress / speed, widhTop + toBlock)
                     );

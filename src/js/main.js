@@ -12,6 +12,8 @@ import wallPictures from './modules/wall-pictures';
 import accordion from './modules/accordion';
 import burgerMenu from './modules/burger-menu';
 import scrolling from './modules/scrolling';
+import dropfile from './modules/drop-file';
+import calcDbOpti from './modules/calc-db-optimize';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -24,13 +26,15 @@ window.addEventListener('DOMContentLoaded', () => {
     languageCheck('[name="message"]');
     download('.button-transparent', '#styles .row');
     // calculator('XXX');
-    calcDb();
+    // calcDb();
+    calcDbOpti();
     // filter('.portfolio-menu li', '.portfolio-block');
     filter1('.portfolio-menu', '.portfolio-block', 'active');
     wallPictures('.sizes-block');
     accordion('#accordion', '.accordion-heading', '.accordion-block');
     burgerMenu('.burger', '.burger-menu');
     scrolling('.pageup');
+    dropfile();
 
 
 
